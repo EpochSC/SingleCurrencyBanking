@@ -1,4 +1,12 @@
-SC999
-=====
+Gold Coin based Single Currency & Banking System
+==========================================
 
-The 999 call implementation - Can still be made better. (Zupa)
+This is the old working version with 999 calls to the database.
+
+
+Currently in Github
+-----------------------
+
+* Custom Hive dll's to support 999 calls
+
+
