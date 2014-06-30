@@ -15,6 +15,8 @@ _itemsPlayer = weapons player;
 _hasTools =  "ItemToolbox" in _itemsPlayer;
 _onLadder =		(getNumber (configFile >> "CfgMovesMaleSdr" >> "States" >> (animationState player) >> "onLadder")) == 1;
 _canDo = (!r_drag_sqf && !r_player_unconscious && !_onLadder);
+_weapons = [currentWeapon player] + (weapons player) + (magazines player);
+	_isBike = typeOf cursorTarget in ["MMT_Civ"];
 
 _nearLight = 	nearestObject [player,"LitObject"];
 _canPickLight = false;
@@ -196,6 +198,16 @@ if (!isNull cursorTarget && !_inVehicle && !_isPZombie && (player distance curso
 			if(_cursorTarget isKindOf _x) exitWith {_isFuel = true;};
 		} count dayz_fuelsources;
 	};
+	
+
+	if((_isBike && "ItemToolbox" in _weapons && (player distance cursorTarget < 10)) and _canDo) then {
+if (s_player_packOBJ < 0) then {
+s_player_packOBJ = player addaction[("<t color=""#4eff00"">" + ("Re-Pack Bike") +"</t>"),"bike\pack.sqf","",5,false,true,"", ""];
+};
+} else {
+player removeAction s_player_packOBJ;
+s_player_packOBJ = -1;
+};
 
 	// diag_log ("OWNERID = " + _ownerID + " CHARID = " + dayz_characterID + " " + str(_ownerID == dayz_characterID));
 	
@@ -238,10 +250,12 @@ if (!isNull cursorTarget && !_inVehicle && !_isPZombie && (player distance curso
                                 _player_deleteBuild = true;
                         };		
 				};	
+				
+				
+				
 		// CURSOR TARGET VEHICLE
 		if(_isVehicle) then {
-			
-			//flip vehicle small vehicles by your self && all other vehicles with help nearby
+					//flip vehicle small vehicles by your self && all other vehicles with help nearby
 			if (!(canmove _cursorTarget) && (player distance _cursorTarget >= 2) && (count (crew _cursorTarget))== 0 && ((vectorUp _cursorTarget) select 2) < 0.5) then {
 				_playersNear = {isPlayer _x} count (player nearEntities ["CAManBase", 6]);
 				if(_isVehicletype || (_playersNear >= 2)) then {
@@ -257,6 +271,9 @@ if (!isNull cursorTarget && !_inVehicle && !_isPZombie && (player distance curso
 		};
 	
 	};
+	
+	
+
 
 	if(_player_deleteBuild) then {
 		if (s_player_deleteBuild < 0) then {

@@ -646,9 +646,10 @@ if(isServer) then {
 	};
 	if (isNil "DZE_DeathMsgTitleText") then {
 		DZE_DeathMsgTitleText = false;
-	};
-	DZE_safeVehicle = ["ParachuteWest","ParachuteC"];
+		};
+	DZE_safeVehicle = ["ParachuteWest","ParachuteC","MMT_Civ"];
 };
+
 
 if(!isDedicated) then {
 

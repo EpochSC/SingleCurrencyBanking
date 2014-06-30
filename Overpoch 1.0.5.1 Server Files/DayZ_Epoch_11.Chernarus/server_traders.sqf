@@ -2,25 +2,25 @@
 serverTraders = ["Tanny_PMC","Drake","BAF_Soldier_AAR_DDPM","US_Delta_Force_AR_EP1","US_Delta_Force_Medic_EP1","Soldier_MG_PKM_PMC","Soldier_MG_PMC","UN_CDF_Soldier_Crew_EP1","GUE_Soldier_1","Soldier_Sniper_PMC","UN_CDF_Soldier_Pilot_EP1","GUE_Soldier_3","BAF_Soldier_EN_MTP","UN_CDF_Soldier_Pilot_EP1","GUE_Worker2","Herrera_Light","Soldier_MG_PKM_PMC","Soldier_MG_PMC","GUE_Soldier_CO","RU_Damsel4","FR_Sykes","GUE_Villager4","TK_GUE_Warlord_EP1","GUE_Commander","GUE_Soldier_2","TK_GUE_Soldier_5_EP1","CIV_EuroWoman02_EP1","Dr_Annie_Baker_EP1","GUE_Soldier_Crew","Citizen3_EP1","ibr_lingorman6","ibr_lingorman6s","TK_CIV_Woman02_EP1","Damsel3","USMC_LHD_Crew_Green","USMC_LHD_Crew_Blue"];
 // Hero Vendor
 menu_Tanny_PMC = [
-	[["Ammunition",478],["Clothes",476],["Helicopter Armed",493],["Military Armed",562],["Trucks Armed",479],["Weapons",477],["Money",700],["Overwatch",1008]],
+	[["Ammunition",478],["Clothes",497],["Helicopter Armed",493],["Military Armed",562],["Trucks Armed",479],["Weapons",477],["Money",700]],
 	[],
 	"hero"
 ];
 // Ammunition neutral
 menu_Drake = [
-	[["Assault Rifle Ammo",480],["Light Machine Gun Ammo",481],["Pistol Ammo",484],["Shotguns and Single-shot Ammo",573],["Sniper Rifle Ammo",482],["Submachine Gun Ammo",483],["Overwatch Ammo",1005]],
+	[["Assault Rifle Ammo",609],["Light Machine Gun Ammo",610],["Pistol Ammo",611],["Shotguns and Single-shot Ammo",613],["Sniper Rifle Ammo",614],["Submachine Gun Ammo",612],["Overwatch Pistol Ammo",1012],["Overwatch Gun Ammo",1013]],
 	[],
 	"neutral"
 ];
 // Weapons neutral
 menu_BAF_Soldier_AAR_DDPM = [
-	[["Assault Rifle",485],["Light Machine Gun",486],["Pistols",489],["Shotguns and Single-shot",574],["Sniper Rifle",487],["Submachine Guns",488],["Overwatch Heavy",1004],["Overwatch MPS",1003],["Overwatch Sniper",1002],["Overwatch Rifle",1001],["Overwatch sidearm",1000]],
+	[["Assault Rifle",637],["Light Machine Gun",638],["Pistols",674],["Shotguns and Single-shot",641],["Sniper Rifle",640],["Submachine Guns",642],["Overwatch VIL",1002],["Overwatch TAR",1003],["Overwatch Sniper",1011],["Overwatch SCAR",1004],["Overwatch sidearm",1001],["Overwatch MAS",1007],["Overwatch HK417",1009],["Overwatch HK416",1008],["Overwatch HK416",1008],["Overwatch DMR",1010],["Overwatch ACR",1005]],
 	[],
 	"neutral"
 ];
 // neutral Vehicles
 menu_US_Delta_Force_AR_EP1 = [
-	[["Bikes and ATV",608],["Buses and Vans",563],["Cargo Trucks",564],["Fuel Trucks",492],["Military Unarmed",491],["Trucks",495],["Used Cars",585],["Utility Vehicles",565],["Overwatch Car",1007]],
+	[["Bikes and ATV",587],["Buses and Vans",588],["Cargo Trucks",586],["Fuel Trucks",589],["Military Unarmed",598],["Trucks",590],["Used Cars",520],["Utility Vehicles",591],["Overwatch SP-Car",1015],["Overwatch S-Car",1016],["Overwatch Camel",1014]],
 	[],
 	"neutral"
 ];
@@ -32,13 +32,13 @@ menu_US_Delta_Force_Medic_EP1 = [
 ];
 // Weapons neutral
 menu_Soldier_MG_PKM_PMC = [
-	[["Assault Rifle",602],["Light Machine Gun",603],["Pistols",606],["Shotguns and Single-shot",607],["Sniper Rifle",605],["Submachine Guns",604],["Overwatch Heavy",1004],["Overwatch MPS",1003],["Overwatch Sniper",1002],["Overwatch Rifle",1001],["Overwatch sidearm",1000]],
+	[["Assault Rifle",637],["Light Machine Gun",638],["Pistols",674],["Shotguns and Single-shot",641],["Sniper Rifle",640],["Submachine Guns",642],["Overwatch VIL",1002],["Overwatch TAR",1003],["Overwatch Sniper",1011],["Overwatch SCAR",1004],["Overwatch sidearm",1001],["Overwatch MAS",1007],["Overwatch HK417",1009],["Overwatch HK416",1008],["Overwatch G3",1006],["Overwatch DMR",1010],["Overwatch ACR",1005]],
 	[],
 	"neutral"
 ];
 // Ammunition Neutral
 menu_Soldier_MG_PMC = [
-	[["Assault Rifle Ammo",609],["Light Machine Gun Ammo",610],["Pistol Ammo",611],["Shotguns and Single-shot Ammo",613],["Sniper Rifle Ammo",614],["Submachine Gun Ammo",612],["Overwatch Ammo",1005]],
+	[["Assault Rifle Ammo",609],["Light Machine Gun Ammo",610],["Pistol Ammo",611],["Shotguns and Single-shot Ammo",613],["Sniper Rifle Ammo",614],["Submachine Gun Ammo",612],["Overwatch Pistol Ammo",1012],["Overwatch Gun Ammo",1013]],
 	[],
 	"neutral"
 ];
@@ -50,19 +50,19 @@ menu_UN_CDF_Soldier_Crew_EP1 = [
 ];
 // Bandit Trader
 menu_GUE_Soldier_1 = [
-	[["Ammunition",577],["Clothing",575],["Helicopter Armed",512],["Military Armed",569],["Trucks Armed",534],["Weapons",627],["Money",700],["Overwatch",1008]],
+	[["Ammunition",577],["Clothing",575],["Helicopter Armed",512],["Military Armed",569],["Trucks Armed",534],["Weapons",627],["Money",700]],
 	[],
 	"hostile"
 ];
 // Aircraft Dealer
 menu_Soldier_Sniper_PMC = [
-	[["Airplanes",517],["Helicopter Unarmed",519],["Cheap Helicopter Armed",701],["Overwatch Fly",1006]],
+	[["Airplanes",517],["Helicopter Unarmed",519],["Overwatch Fly",1006]],
 	[],
 	"neutral"
 ];
 // Vehicles Neutral
 menu_UN_CDF_Soldier_Pilot_EP1 = [
-	[["Bikes and ATV",587],["Buses and Vans",588],["Cargo Trucks",586],["Fuel Trucks",589],["Military Unarmed",598],["Trucks",590],["Used Cars",520],["Utility Vehicles",591],["Overwatch Car",1007]],
+	[["Bikes and ATV",587],["Buses and Vans",588],["Cargo Trucks",586],["Fuel Trucks",589],["Military Unarmed",598],["Trucks",590],["Used Cars",520],["Utility Vehicles",591],["Overwatch SP-Car",1015],["Overwatch S-Car",1016],["Overwatch Camel",1014]],
 	[],
 	"neutral"
 ];
@@ -74,49 +74,49 @@ menu_GUE_Soldier_3 = [
 ];
 // neutral Building/Parts
 menu_BAF_Soldier_EN_MTP = [
-	[["Building Supplies",530],["Toolbelt Items",532],["Vehicle Parts",531],["Money",700]],
+	[["Building Supplies",508],["Toolbelt Items",510],["Vehicle Parts",509],["Money",700]],
 	[],
 	"neutral"
 ];
 // neutral Vehicles 2
 menu_UN_CDF_Soldier_Pilot_EP1 = [
-	[["Bikes and ATV",536],["Buses and Vans",592],["Cargo Trucks",570],["Fuel Trucks",595],["Military Unarmed",599],["Trucks Unarmed",535],["Used Cars",600],["Utility Vehicles",568],["Overwatch Car",1007]],
+	[["Bikes and ATV",587],["Buses and Vans",588],["Cargo Trucks",586],["Fuel Trucks",589],["Military Unarmed",598],["Trucks Unarmed",535],["Used Cars",520],["Utility Vehicles",591],["Overwatch SP-Car",1015],["Overwatch S-Car",1016],["Overwatch Camel",1014]],
 	[],
 	"neutral"
 ];
 // General Store 2
 menu_GUE_Worker2 = [
-	[["Backpacks",538],["Clothes",628],["Cooked Meats",630],["Drinks",601],["Packaged Food",629]],
+	[["Backpacks",496],["Clothes",497],["Cooked Meats",580],["Drinks",498],["Packaged Food",579]],
 	[["ItemCopperBar","TrashJackDaniels",1,1,"buy","Empty Whiskey Bottle","Copper Bar",101]],
 	"neutral"
 ];
 // Medical Supplies
 menu_Herrera_Light = [
-	[["Chem-lites/Flares",542],["Medical Supplies",541],["Smoke Grenades",543]],
+	[["Chem-lites/Flares",669],["Medical Supplies",670],["Smoke Grenades",671]],
 	[["FoodBioMeat","ItemZombieParts",1,1,"buy","Zombie Parts","Bio Meat",101]],
 	"neutral"
 ];
 // Weapons neutral 2
 menu_Soldier_MG_PKM_PMC = [
-	[["Assault Rifle",615],["Light Machine Gun",616],["Pistols",617],["Shotguns and Single-shot",620],["Sniper Rifle",619],["Submachine Guns",618],["Overwatch Heavy",1004],["Overwatch MPS",1003],["Overwatch Sniper",1002],["Overwatch Rifle",1001],["Overwatch sidearm",1000]],
+	[["Assault Rifle",637],["Light Machine Gun",638],["Pistols",674],["Shotguns and Single-shot",641],["Sniper Rifle",640],["Submachine Guns",642],["Overwatch VIL",1002],["Overwatch TAR",1003],["Overwatch Sniper",1011],["Overwatch SCAR",1004],["Overwatch sidearm",1001],["Overwatch MAS",1007],["Overwatch HK417",1009],["Overwatch HK416",1008],["Overwatch G3",1006],["Overwatch DMR",1010],["Overwatch ACR",1005]],
 	[],
 	"neutral"
 ];
 // Ammunition neutral 2
 menu_Soldier_MG_PMC = [
-	[["Assault Rifle Ammo",621],["Light Machine Gun Ammo",622],["Pistol Ammo",625],["Shotguns and Single-shot Ammo",623],["Sniper Rifle Ammo",624],["Submachine Gun Ammo",626],["Overwatch Ammo",1005]],
+	[["Assault Rifle Ammo",609],["Light Machine Gun Ammo",610],["Pistol Ammo",611],["Shotguns and Single-shot Ammo",613],["Sniper Rifle Ammo",614],["Submachine Gun Ammo",612],["Overwatch Pistol Ammo",1012],["Overwatch Gun Ammo",1013]],
 	[],
 	"neutral"
 ];
 // East Wholesaler
 menu_GUE_Soldier_CO = [
-	[["Wholesale",555]],
+	[["Wholesale",636]],
 	[],
 	"neutral"
 ];
 // General Store 3
 menu_RU_Damsel4 = [
-	[["Backpacks",632],["Clothes",631],["Cooked Meats",634],["Drinks",633],["Packaged Food",635]],
+	[["Backpacks",496],["Clothes",497],["Cooked Meats",580],["Drinks",498],["Packaged Food",579]],
 	[["ItemCopperBar","TrashJackDaniels",1,1,"buy","Empty Whiskey Bottle","Copper Bar",101]],
 	"neutral"
 ];
@@ -128,37 +128,37 @@ menu_FR_Sykes = [
 ];
 // Boat Vendor
 menu_GUE_Villager4 = [
-	[["Boats Armed",558],["Boats Unarmed",557]],
+	[["Boats Armed",673],["Boats Unarmed",672]],
 	[],
 	"neutral"
 ];
 // Weapons neutral 2
 menu_TK_GUE_Warlord_EP1 = [
-	[["Assault Rifle",637],["Light Machine Gun",638],["Pistols",674],["Shotguns and Single-shot",641],["Sniper Rifle",640],["Submachine Guns",642],["Overwatch Heavy",1004],["Overwatch MPS",1003],["Overwatch Sniper",1002],["Overwatch Rifle",1001],["Overwatch sidearm",1000]],
+	[["Assault Rifle",637],["Light Machine Gun",638],["Pistols",674],["Shotguns and Single-shot",641],["Sniper Rifle",640],["Submachine Guns",642],["Overwatch VIL",1002],["Overwatch TAR",1003],["Overwatch Sniper",1011],["Overwatch SCAR",1004],["Overwatch sidearm",1001],["Overwatch MAS",1007],["Overwatch HK417",1009],["Overwatch HK416",1008],["Overwatch G3",1006],["Overwatch DMR",1010],["Overwatch ACR",1005]],
 	[],
 	"neutral"
 ];
 // Ammunition Neutral 2
 menu_GUE_Commander = [
-	[["Assault Rifle Ammo",643],["Light Machine Gun Ammo",644],["Pistol Ammo",646],["Shotguns and Single-shot Ammo",649],["Sniper Rifle Ammo",647],["Submachine Gun Ammo",648],["Overwatch Ammo",1005]],
+	[["Assault Rifle Ammo",609],["Light Machine Gun Ammo",610],["Pistol Ammo",611],["Shotguns and Single-shot Ammo",613],["Sniper Rifle Ammo",614],["Submachine Gun Ammo",612],["Overwatch Pistol Ammo",1012],["Overwatch Gun Ammo",1013]],
 	[],
 	"neutral"
 ];
 // Vehicles Neutral 2
 menu_GUE_Soldier_2 = [
-	[["Bikes and ATV",650],["Buses and Vans",651],["Cargo Trucks",653],["Fuel Trucks",655],["Military Unarmed",658],["Trucks",659],["Used Cars",660],["Utility Vehicles",661],["Overwatch Car",1007]],
+	[["Bikes and ATV",587],["Buses and Vans",588],["Cargo Trucks",586],["Fuel Trucks",589],["Military Unarmed",598],["Trucks",590],["Used Cars",520],["Utility Vehicles",591],["Overwatch SP-Car",1015],["Overwatch S-Car",1016],["Overwatch Camel",1014]],
 	[],
 	"neutral"
 ];
 // Neutral Building/Parts
 menu_TK_GUE_Soldier_5_EP1 = [
-	[["Building Supplies",662],["Toolbelt Items",663],["Vehicle Parts",664],["Money",700]],
+	[["Building Supplies",508],["Toolbelt Items",510],["Vehicle Parts",509],["Money",700]],
 	[],
 	"neutral"
 ];
 // Medical Supplies 2
 menu_CIV_EuroWoman02_EP1 = [
-	[["Chem-lites/Flares",666],["Medical Supplies",665],["Smoke Grenades",668]],
+	[["Chem-lites/Flares",669],["Medical Supplies",670],["Smoke Grenades",671]],
 	[["FoodBioMeat","ItemZombieParts",1,1,"buy","Zombie Parts","Bio Meat",101]],
 	"neutral"
 ];
@@ -176,41 +176,43 @@ menu_GUE_Soldier_Crew = [
 ];
 // Wholesale 3
 menu_Citizen3_EP1 = [
-	[["Wholesale",675]],
+	[["Wholesale",636]],
 	[],
 	"neutral"
 ];
 // neutral Building/parts 2
 menu_ibr_lingorman6 = [
-	[["Building Supplies",678],["Toolbelt Items",679],["Vehicle Parts",677],["Money",700]],
+	[["Building Supplies",508],["Toolbelt Items",510],["Vehicle Parts",509],["Money",700]],
 	[],
 	"neutral"
 ];
 // neutral Building/Parts 3
 menu_ibr_lingorman6s = [
-	[["Building Supplies",680],["Toolbelt Items",681],["Vehicle Parts",682],["Money",700]],
+	[["Building Supplies",508],["Toolbelt Items",510],["Vehicle Parts",509],["Money",700]],
 	[],
 	"neutral"
 ];
 // General Store 4
 menu_TK_CIV_Woman02_EP1 = [
-	[["Backpacks",685],["Clothes",683],["Cooked Meats",686],["Drinks",684],["Packaged Food",687]],
+	[["Backpacks",496],["Clothes",497],["Cooked Meats",580],["Drinks",498],["Packaged Food",579]],
 	[],
 	"neutral"
 ];
 // General Store 5
 menu_Damsel3 = [
-	[["Backpacks",688],["Clothes",689],["Cooked Meats",690],["Drinks",691],["Packaged Food",692]],
+	[["Backpacks",496],["Clothes",497],["Cooked Meats",580],["Drinks",498],["Packaged Food",579]],
 	[],
 	"neutral"
 ];
 
 // Secret trader 1
+
+/*
 menu_USMC_LHD_Crew_Green = [
-	[["Backpacks",688],["Clothes",689],["Cooked Meats",690],["Drinks",691],["Packaged Food",692],["Building Supplies",680],["Toolbelt Items",681],["Vehicle Parts",682],["Money",700]
-	,["Chem-lites/Flares",669],["Medical Supplies",670],["Smoke Grenades",671],["Assault Rifle",615],["Light Machine Gun",616],["Pistols",617],["Shotguns and Single-shot",620]
-	,["Sniper Rifle",619],["Submachine Guns",618],["Assault Rifle Ammo",643],["Light Machine Gun Ammo",644],["Pistol Ammo",646],["Shotguns and Single-shot Ammo",649],["Sniper Rifle Ammo",647],["Submachine Gun Ammo",648]
- ,["Wholesale",636],["Black Market Ammo",527],["Black Market Weapons",526],["Explosives",529],["Bikes and ATV",536],["Buses and Vans",592],["Cargo Trucks",570],["Fuel Trucks",595],["Military Unarmed",599],["Trucks Unarmed",535],["Used Cars",600],["Utility Vehicles",568]
+	[["Backpacks",496],["Clothes",497],["Cooked Meats",580],["Drinks",498],["Packaged Food",579],["Building Supplies",508],["Toolbelt Items",510],["Vehicle Parts",509],["Money",700]
+	,["Chem-lites/Flares",669],["Medical Supplies",670],["Smoke Grenades",671],["Assault Rifle",637],["Light Machine Gun",638],["Pistols",674],["Shotguns and Single-shot",641]
+	,["Sniper Rifle",640],["Submachine Guns",642],["Assault Rifle Ammo",609],["Light Machine Gun Ammo",610],["Pistol Ammo",611],["Shotguns and Single-shot Ammo",613],["Sniper Rifle Ammo",614],["Submachine Gun Ammo",612]
+ ,["Wholesale",636],["Black Market Ammo",527],["Black Market Weapons",526],["Explosives",529],["Bikes and ATV",536],["Buses and Vans",588],["Cargo Trucks",586],["Fuel Trucks",589],["Military Unarmed",598],["Trucks Unarmed",535],["Used Cars",520],["Utility Vehicles",591]
 	],
 	[],
 	"neutral"
@@ -220,11 +222,13 @@ menu_USMC_LHD_Crew_Green = [
 
 // LHD
 menu_USMC_LHD_Crew_Blue = [
-	[["Backpacks",688],["Clothes",689],["Cooked Meats",690],["Drinks",691],["Packaged Food",692],["Building Supplies",680],["Toolbelt Items",681],["Vehicle Parts",682],["Money",700]
-	,["Chem-lites/Flares",669],["Medical Supplies",670],["Smoke Grenades",671],["Assault Rifle",615],["Light Machine Gun",616],["Pistols",617],["Shotguns and Single-shot",620]
-	,["Sniper Rifle",619],["Submachine Guns",618],["Assault Rifle Ammo",643],["Light Machine Gun Ammo",644],["Pistol Ammo",646],["Shotguns and Single-shot Ammo",649],["Sniper Rifle Ammo",647],["Submachine Gun Ammo",648]
+	[["Backpacks",496],["Clothes",497],["Cooked Meats",580],["Drinks",498],["Packaged Food",579],["Building Supplies",508],["Toolbelt Items",510],["Vehicle Parts",509],["Money",700]
+	,["Chem-lites/Flares",669],["Medical Supplies",670],["Smoke Grenades",671],["Assault Rifle",637],["Light Machine Gun",638],["Pistols",674],["Shotguns and Single-shot",641]
+	,["Sniper Rifle",640],["Submachine Guns",642],["Assault Rifle Ammo",609],["Light Machine Gun Ammo",610],["Pistol Ammo",611],["Shotguns and Single-shot Ammo",613],["Sniper Rifle Ammo",614],["Submachine Gun Ammo",612]
  ,["Wholesale",636],["Black Market Ammo",527],["Black Market Weapons",526],["Explosives",529]
 	],
 	[],
 	"neutral"
 ];
+
+*/

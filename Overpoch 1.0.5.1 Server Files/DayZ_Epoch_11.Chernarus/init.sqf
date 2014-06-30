@@ -1,7 +1,5 @@
-/*	
-	For DayZ Epoch
-	Addons Credits: Jetski Yanahui by Kol9yN, Zakat, Gerasimow9, YuraPetrov, zGuba, A.Karagod, IceBreakr, Sahbazz
-*/
+
+
 startLoadingScreen ["","RscDisplayLoadCustom"];
 cutText ["","BLACK OUT"];
 enableSaving [false, false];
@@ -47,6 +45,16 @@ DZE_BuildOnRoads = false; // Default: False
 EpochEvents = [["any","any","any","any",30,"crash_spawner"],["any","any","any","any",0,"crash_spawner"],["any","any","any","any",15,"supply_drop"]];
 dayz_fullMoonNights = true;
 
+DZE_MissionLootTable = true;
+DZE_SelfTransfuse= true;
+DZE_ForceNameTagsInTrader  = true;
+DZE_ConfigTrader = true;
+
+DefaultMagazines = ["ItemBandage","FoodCanFrankBeans","ItemWaterbottleUnfilled","SmokeShellRed","HandRoadFlare"]; 
+DefaultWeapons = ["ItemCompass"]; 
+DefaultBackpack = ""; 
+DefaultBackpackWeapon = "";
+
 //Load in compiled functions
 call compile preprocessFileLineNumbers "custom\variables.sqf";				//Initilize the Variables (IMPORTANT: Must happen very early)
 progressLoadingScreen 0.1;
@@ -80,12 +88,13 @@ if (!isDedicated) then {
 
 	//Lights
 	//[false,12] execVM "\z\addons\dayz_code\compile\local_lights_init.sqf";
-	
+	 execVM "service_point\service_point.sqf";
 };
 
 execVM "debug\faction.sqf";
 execVM "debug\addmarkers.sqf";
 execVM "debug\addmarkers75.sqf";
+execVM "custom\safezone.sqf";
 execVM "gold\init.sqf";
 
 //Start Dynamic Weather

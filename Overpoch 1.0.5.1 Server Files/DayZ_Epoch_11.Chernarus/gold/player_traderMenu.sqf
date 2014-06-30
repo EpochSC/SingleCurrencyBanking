@@ -1,4 +1,3 @@
-// trader menu gui by maca134
 TraderDialogCatList = 12000;
 TraderDialogItemList = 12001;
 TraderDialogBuyPrice = 12002;
@@ -26,16 +25,35 @@ TraderDialogLoadItemList = {
 	ctrlSetText [TraderDialogBuyPrice, ""];
 	ctrlSetText [TraderDialogSellPrice, ""];
 
-	lbAdd [TraderDialogItemList, "Loading precious items..."];
+		_cfgTraderCategory = missionConfigFile >> "CfgTraderCategory" >> (format["Category_%1",_trader_id]);	
 
-	PVDZE_plr_TradeMenuResult = call compile format["tcacheBuy_%1;",_trader_id];
+	PVDZE_plr_TradeMenuResult = [];
+	
+	for "_i" from 0 to ((count _cfgTraderCategory) - 1) do {
+		_class = configName (_cfgTraderCategory select _i);
+					
+		_type  = getText ((_cfgTraderCategory select _i) >> "type");	
+		_buy  = getArray ((_cfgTraderCategory select _i) >> "buy");	
+		_sell = getArray ((_cfgTraderCategory select _i) >> "sell");
+		
+		_buy set [2,1];
+		_sell set [2,1];
 
-	if(isNil "PVDZE_plr_TradeMenuResult") then {
-		PVDZE_plr_TradeMenu = [_activatingPlayer,_trader_id];
-		publicVariableServer  "PVDZE_plr_TradeMenu";
-		waitUntil {!isNil "PVDZE_plr_TradeMenuResult"};
+		_typeNum = 1;
+		if (_type == "trade_weapons") then {
+			_typeNum = 3;
+		} else { 
+			if (_type in ["trade_backpacks", "trade_any_vehicle", "trade_any_vehicle_free", "trade_any_boat", "trade_any_bicycle"]) then {
+				_typeNum = 2;
+			};
+		};
+		
+		_data = [9999,[_class,_typeNum],99999,_buy,_sell,0,_trader_id,_type];
+		
+		PVDZE_plr_TradeMenuResult set [count PVDZE_plr_TradeMenuResult, _data];
 	};
-
+	
+	
 	lbClear TraderDialogItemList;
 	_item_list = [];
 	{
@@ -238,6 +256,3 @@ TraderDialogSell = {
 	};
 	TraderItemList = -1;
 };
-
-// http://puu.sh/6laKN.jpg sell
-// http://puu.sh/6lanx.jpg buy
