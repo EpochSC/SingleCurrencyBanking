@@ -56,7 +56,7 @@ menu_GUE_Soldier_1 = [
 ];
 // Aircraft Dealer
 menu_Soldier_Sniper_PMC = [
-	[["Airplanes",517],["Helicopter Unarmed",519],["Overwatch Fly",1006]],
+	[["Airplanes",517],["Helicopter Unarmed",519]],
 	[],
 	"neutral"
 ];

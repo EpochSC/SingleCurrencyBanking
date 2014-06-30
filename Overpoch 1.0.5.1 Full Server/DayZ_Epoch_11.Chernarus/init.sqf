@@ -50,6 +50,11 @@ DZE_SelfTransfuse= true;
 DZE_ForceNameTagsInTrader  = true;
 DZE_ConfigTrader = true;
 
+DefaultMagazines = ["ItemBandage","FoodCanFrankBeans","ItemWaterbottleUnfilled","SmokeShellRed","HandRoadFlare"]; 
+DefaultWeapons = ["ItemCompass"]; 
+DefaultBackpack = ""; 
+DefaultBackpackWeapon = "";
+
 //Load in compiled functions
 call compile preprocessFileLineNumbers "custom\variables.sqf";				//Initilize the Variables (IMPORTANT: Must happen very early)
 progressLoadingScreen 0.1;

@@ -1,32 +1,32 @@
 class Category_562 {
 	class HMMWV_M998A2_SOV_DES_EP1_DZE {
 		type = "trade_any_vehicle";
-		buy[] = {324000,"Coins"};
-		sell[] = {108000,"Coins"};
+		buy[] = {3240000,"Coins"};
+		sell[] = {1080000,"Coins"};
 	};
 	class HMMWV_M1151_M2_CZ_DES_EP1_DZE {
 		type = "trade_any_vehicle";
-		buy[] = {324000,"Coins"};
-		sell[] = {108000,"Coins"};
+		buy[] = {3240000,"Coins"};
+		sell[] = {1080000,"Coins"};
 	};
 	class LandRover_Special_CZ_EP1_DZE {
 		type = "trade_any_vehicle";
-		buy[] = {324000,"Coins"};
-		sell[] = {108000,"Coins"};
+		buy[] = {3240000,"Coins"};
+		sell[] = {1080000,"Coins"};
 	};
 	class LandRover_MG_TK_EP1_DZE {
 		type = "trade_any_vehicle";
-		buy[] = {324000,"Coins"};
-		sell[] = {108000,"Coins"};
+		buy[] = {3240000,"Coins"};
+		sell[] = {1080000,"Coins"};
 	};
 	class UAZ_MG_TK_EP1_DZE {
 		type = "trade_any_vehicle";
-		buy[] = {108000,"Coins"};
-		sell[] = {45000,"Coins"};
+		buy[] = {1080000,"Coins"};
+		sell[] = {450000,"Coins"};
 	};
 	class GAZ_Vodnik_DZE {
 		type = "trade_any_vehicle";
-		buy[] = {648000,"Coins"};
-		sell[] = {216000,"Coins"};
+		buy[] = {6480000,"Coins"};
+		sell[] = {2160000,"Coins"};
 	};
 };
