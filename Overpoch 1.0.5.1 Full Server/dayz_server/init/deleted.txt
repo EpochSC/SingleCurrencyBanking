@@ -1,0 +1,5 @@
+	if ((isNull (findDisplay 106)) && (isNull (findDisplay -1)) && (isNull (findDisplay 41144))
+				&& (isNull (findDisplay 6902)) && (isNull (findDisplay 6903)) && (isNull (findDisplay 6904)) && (isNull (findDisplay 6905))
+				&& (isNull (findDisplay 65431)) && (isNull (findDisplay 65432)) && (isNull (findDisplay 65433)) && (isNull (findDisplay 65434))
+				&& (isNull (findDisplay 65440)) && (isNull (findDisplay 65441)) && (isNull (findDisplay 65442)) && !(ctrlEnabled 1900)) then
+				{closeDialog 0;}else{if (!isNull (findDisplay 106) and !(ctrlEnabled 6902) and (lbSize ((findDisplay 106) displayCtrl 105) < 1)) then {closeDialog 0;};};
