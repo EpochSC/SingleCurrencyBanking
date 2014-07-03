@@ -1,8 +1,9 @@
 private ["_part_out","_part_in","_qty_out","_qty_in","_qty","_buy_o_sell","_textPartIn","_textPartOut","_needed","_started","_finished","_animState","_isMedic","_total_parts_out","_abort","_removed","_tradeCounter","_next_highest_bar","_third_highest_bar","_next_highest_conv","_third_highest_conv","_third_parts_out_raw","_third_parts_out","_remainder","_next_parts_out_raw","_next_parts_out","_activatingPlayer","_traderID","_total_trades"];
 
+systemChat "test1";
 if(DZE_ActionInProgress) exitWith { cutText ["Trade already in progress." , "PLAIN DOWN"]; };
 DZE_ActionInProgress = true;
-
+systemChat "test2";
 // Test cannot lock while another player is nearby
 //_playerNear = {isPlayer _x} count (player nearEntities ["CAManBase", 12]) > 1;
 //if(_playerNear) exitWith { DZE_ActionInProgress = false; cutText ["Cannot trade while another player is nearby." , "PLAIN DOWN"];  };
@@ -14,6 +15,8 @@ _finish_trade = {
 	DZE_ActionInProgress = false;
 	dayzTradeResult = nil;
 };
+
+
 
 _name = _this select 0;
 _textPart = _this select 1;
@@ -27,11 +30,15 @@ _qty = {_x == _name} count magazines player;
 _removed = 0;
 _tradeCounter = 0;
 
+systemChat "test4";
+
 _total_trades = _qty;
 if (_total_trades < 1) exitWith {
 	cutText [format["You do not have a %1", _textPart], "PLAIN DOWN"];
 	call _finish_trade;
 };
+
+systemChat "test5";
 
 _abort = false;
 
@@ -39,6 +46,7 @@ _abort = false;
 for "_x" from 1 to _total_trades do {
 	_tradeCounter = _tradeCounter + 1;
 
+	systemChat "test6";
 	// cutText ["Starting trade, stand still to complete.", "PLAIN DOWN"];
 	if(_total_trades == 1) then { 
 		cutText [format["Starting trade, stand still to complete trade.",_tradeCounter,_total_trades] , "PLAIN DOWN"];
@@ -106,6 +114,8 @@ publicVariableServer "PVDZE_plr_Save";
 	if(_abort) exitWith {};
 };
 DZE_ActionInProgress = false;
+
+systemChat "test7";
 
 _cid =	player getVariable ["CharacterID","0"];
 _headShotsZupa = player getVariable ["headShots",0];

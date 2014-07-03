@@ -45,7 +45,8 @@ class Mission
 		"american_law_enforcement",
 		"CYBP_Camels_Config",
 		"nissan_350z",
-		"ussr_cheytac"
+		"ussr_cheytac",
+		"bb_mercenary"
 	};
 	addOnsAuto[]=
 	{
@@ -1202,7 +1203,7 @@ class Mission
 	};
 	class Markers
 	{
-		items=18;
+		items=19;
 		class Item0
 		{
 			position[]={7550.6182,361.05222,8371.957};
@@ -1333,10 +1334,18 @@ class Mission
 			type="mil_circle";
 			colorName="ColorBlack";
 		};
+			class Item18
+		{
+			position[]={12521.047, 15.410375, 273.95178};
+			name="UPAZ";
+			text="Upaz trader city";
+			type="mil_circle";
+			colorName="ColorBlack";
+		};
 	};
 	class Sensors
 	{
-	items=14;
+	items=15;
 		class Item0
 		{
 			position[]={4053.8501,364.76645,11668.645};
@@ -1548,6 +1557,22 @@ class Mission
 			expCond="(player distance zonebank6) < 15;";
 			expActiv="TitleText[""Now entering Banking area"",""PLAIN DOWN""]; canbuild = false;insafezone = true;";
 			expDesactiv="TitleText[""Now leaving Banking area"",""PLAIN DOWN""]; canbuild = true;insafezone = false;";
+			class Effects
+			{
+			};
+		};
+		
+			class Item14
+		{
+			position[]={12521.047, 273.95178, 15.410375};
+			activationBy="WEST";
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			name="upaz";
+			expCond="(player distance upaz) < 250;";
+			expActiv="TitleText[""Now entering Trading area"",""PLAIN DOWN""]; canbuild = false;insafezone = true;";
+			expDesactiv="TitleText[""Now leaving Trading area"",""PLAIN DOWN""]; canbuild = true;insafezone = false;";
 			class Effects
 			{
 			};

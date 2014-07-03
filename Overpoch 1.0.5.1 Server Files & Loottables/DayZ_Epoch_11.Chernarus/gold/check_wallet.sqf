@@ -11,6 +11,15 @@ systemChat format ['You took %1 coins, ID says %2 !',_hisMoney,_name];
 sleep 2;
 
 _cid =	player getVariable ["CharacterID","0"];
+
 _headShotsZupa = player getVariable ["headShots",0];
+
+
+			if(_headShotsZupa > 0) then{
+				
+				}else{
+				_headShotsZupa = 0;
+				};
+
 _key = format["CHILD:999:UPDATE `character_data` SET `HeadshotsZ` = %1 WHERE `CharacterID` = %2:[0]:",_headShotsZupa,_cid];
 _result = _key call server_hiveReadWrite;

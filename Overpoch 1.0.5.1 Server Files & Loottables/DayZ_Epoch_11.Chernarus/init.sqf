@@ -46,6 +46,14 @@ EpochEvents = [["any","any","any","any",30,"crash_spawner"],["any","any","any","
 dayz_fullMoonNights = true;
 
 DZE_MissionLootTable = true;
+DZE_SelfTransfuse= true;
+DZE_ForceNameTagsInTrader  = true;
+DZE_ConfigTrader = true;
+
+DefaultMagazines = ["ItemBandage","ItemBandage","17Rnd_9x19_glock17","17Rnd_9x19_glock17","ItemPainkiller"];
+DefaultWeapons = ["glock17_EP1","ItemFlashlight","ItemMap","ItemToolbox"];
+DefaultBackpack = "DZ_Patrol_Pack_EP1";
+DefaultBackpackWeapon = "";
 
 //Load in compiled functions
 call compile preprocessFileLineNumbers "custom\variables.sqf";				//Initilize the Variables (IMPORTANT: Must happen very early)

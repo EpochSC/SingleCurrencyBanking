@@ -25,35 +25,16 @@ TraderDialogLoadItemList = {
 	ctrlSetText [TraderDialogBuyPrice, ""];
 	ctrlSetText [TraderDialogSellPrice, ""];
 
-		_cfgTraderCategory = missionConfigFile >> "CfgTraderCategory" >> (format["Category_%1",_trader_id]);	
+	lbAdd [TraderDialogItemList, "Loading precious items..."];
 
-	PVDZE_plr_TradeMenuResult = [];
-	
-	for "_i" from 0 to ((count _cfgTraderCategory) - 1) do {
-		_class = configName (_cfgTraderCategory select _i);
-					
-		_type  = getText ((_cfgTraderCategory select _i) >> "type");	
-		_buy  = getArray ((_cfgTraderCategory select _i) >> "buy");	
-		_sell = getArray ((_cfgTraderCategory select _i) >> "sell");
-		
-		_buy set [2,1];
-		_sell set [2,1];
+	PVDZE_plr_TradeMenuResult = call compile format["tcacheBuy_%1;",_trader_id];
 
-		_typeNum = 1;
-		if (_type == "trade_weapons") then {
-			_typeNum = 3;
-		} else { 
-			if (_type in ["trade_backpacks", "trade_any_vehicle", "trade_any_vehicle_free", "trade_any_boat", "trade_any_bicycle"]) then {
-				_typeNum = 2;
-			};
-		};
-		
-		_data = [9999,[_class,_typeNum],99999,_buy,_sell,0,_trader_id,_type];
-		
-		PVDZE_plr_TradeMenuResult set [count PVDZE_plr_TradeMenuResult, _data];
+	if(isNil "PVDZE_plr_TradeMenuResult") then {
+		PVDZE_plr_TradeMenu = [_activatingPlayer,_trader_id];
+		publicVariableServer  "PVDZE_plr_TradeMenu";
+		waitUntil {!isNil "PVDZE_plr_TradeMenuResult"};
 	};
-	
-	
+
 	lbClear TraderDialogItemList;
 	_item_list = [];
 	{
@@ -214,29 +195,20 @@ TraderDialogBuy = {
 		
 	_item = TraderItemList select _index;
 	
-		systemChat "test a 1";
-		
-	if( 0 > 1 )then{ // _item select 9 == "gold\trade_items.sqf"
-	
-			systemChat "test a 1-1";
+
+	if(_item select 9 == "gold\trade_items.sqf")then{
 	
 	_data = [_item select 0, _item select 1, _item select 2, _item select 8];
 	
 	_data execVM "gold\trade_items_buy.sqf";
 	
-			systemChat "test a 1-2";
-	
 	}else{
-	
-			systemChat "test a 2-1";
 	
 	_data = [_item select 0, _item select 3, 1, _item select 2, "buy", _item select 4, _item select 1, _item select 8];
 	
-			systemChat "test a 2-2";
+	
 	
 	[0, player, '', _data] execVM (_item select 9);
-	
-			systemChat "test a 2-3";
 	
 	};
 	TraderItemList = -1;
@@ -250,28 +222,18 @@ TraderDialogSell = {
 	};
 	_item = TraderItemList select _index;
 	
-	if( 0 > 1 )then{ // _item select 9 == "gold\trade_items.sqf"
-	
-			systemChat "test a 2-1";
+	if(_item select 9 == "gold\trade_items.sqf")then{
 	
 	_data = [_item select 0, _item select 1, _item select 5, _item select 8];
 	
-			systemChat "test a 2-2";
-	
 	_data execVM "gold\trade_items_sell.sqf";
-	
-			systemChat "test a 2-3";
 	
 	}else{
 	
-			systemChat "test a 1-2";
 	_data = [_item select 6, _item select 0, _item select 5, 1, "sell", _item select 1, _item select 7, _item select 8];
 	
-			systemChat "test a 1-3";
 
 	[0, player, '', _data] execVM (_item select 9);
-	
-			systemChat "test a 1-4";
 	};
 	TraderItemList = -1;
 };
