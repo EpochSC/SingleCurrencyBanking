@@ -2,6 +2,10 @@
 	FUNCTION COMPILES
 */
 //Player only
+
+BIS_fnc_numberDigits 	= compile preprocessFileLineNumbers "custom\numberDigits.sqf";
+BIS_fnc_numberText 	= compile preprocessFileLineNumbers "custom\numberText.sqf"; 
+
 if (!isDedicated) then {
 
 	"filmic" setToneMappingParams [0.07, 0.31, 0.23, 0.37, 0.011, 3.750, 6, 4]; setToneMapping "Filmic";
@@ -129,6 +133,8 @@ if (!isDedicated) then {
 	player_removeItems =		compile preprocessFileLineNumbers "\z\addons\dayz_code\compile\fn_removeItems.sqf";
 	//Trader ["Trader City Name",false,"enter"] - Trader City Name | Show Message | "enter" || "leave"
 	player_traderCity = 		compile preprocessFileLineNumbers "\z\addons\dayz_code\compile\player_traderCity.sqf";
+	
+
 
 	// combination of check && remove items
 	player_checkAndRemoveItems = {

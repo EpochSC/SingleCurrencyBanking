@@ -134,7 +134,7 @@ if (_qty >= _qty_in) then {
 					
 					_removed = _qty - _newM; // 
 					
-						systemChat format ['Payed %1 Coins. %2 incoming!',_removed,_part_out];
+						systemChat format ['Payed %1 %3. %2 incoming!',_removed,_part_out,CurrencyName];
 						
 						if(_removed == _qty_in) then {
 							_dir = round(random 360);

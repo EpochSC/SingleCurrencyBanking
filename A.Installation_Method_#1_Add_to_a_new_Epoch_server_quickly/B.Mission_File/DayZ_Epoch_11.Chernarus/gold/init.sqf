@@ -1,12 +1,3 @@
-// config
-LimitOnBank = false;
-MaxBankMoney = 10;
-DonatorListZupa = ["76561198012464696","111111111"];
-MaxDonatorBankMoney = 20;
-//config end
-
-
-
 BankDialogTransferAmount 		= 13000;
 BankDialogPlayerBalance 		= 13001;
 BankDialogBankBalance 			= 13002;
@@ -21,12 +12,12 @@ GivePlayerDialogPlayerBalance 	= 14001;
 
 
 BankDialogUpdateAmounts = {
-	ctrlSetText [BankDialogPlayerBalance, format["%1 %2", (player getVariable ['headShots', 0]), "Coins"]];
-	ctrlSetText [BankDialogBankBalance, format["%1 %2", (player getVariable ['bank', 0]), "Coins"]];
+	ctrlSetText [BankDialogPlayerBalance, format["%1 %2", (player getVariable ['headShots', 0] call BIS_fnc_numberText), CurrencyName]];
+	ctrlSetText [BankDialogBankBalance, format["%1 %2", (player getVariable ['bank', 0] call BIS_fnc_numberText), CurrencyName]];
 };
 
 GivePlayerDialogAmounts = {
-	ctrlSetText [GivePlayerDialogPlayerBalance, format["%1 %2", (player getVariable ['headShots', 0]), "Coins"]];
+	ctrlSetText [GivePlayerDialogPlayerBalance, format["%1 %2", (player getVariable ['headShots', 0] call BIS_fnc_numberText), CurrencyName]];
 	ctrlSetText [14003, format["%1", (name cursorTarget)]];
 };
 
@@ -46,7 +37,7 @@ BankDialogWithdrawAmount = {
 	PVDZE_plr_Save = [player,(magazines player),true,true] ;
 	publicVariableServer "PVDZE_plr_Save";
 
-	cutText [format["You have withdrawn %1 %2.", _amount, "Coins"], "PLAIN DOWN"];
+	cutText [format["You have withdrawn %1 %2.", [_amount] call BIS_fnc_numberText, CurrencyName], "PLAIN DOWN"];
 };
 
 BankDialogDepositAmount = {
@@ -57,7 +48,7 @@ BankDialogDepositAmount = {
 	if (_amount < 1 or _amount > _wealth) exitWith {
 		cutText ["You can not deposit more than you have.", "PLAIN DOWN"];
 	};
-	
+
 	if(   LimitOnBank  && ((_bank + _amount ) >  MaxBankMoney)) then{
 	
 	if(   (getPlayerUID player in DonatorListZupa )  && ((_bank + _amount ) <  MaxDonatorBankMoney)) then{ 
@@ -68,9 +59,9 @@ BankDialogDepositAmount = {
 					player setVariable ["moneychanged",1,true];	
 					PVDZE_plr_Save = [player,(magazines player),true,true] ;
 					publicVariableServer "PVDZE_plr_Save";				
-					cutText [format["You have deposited %1 %2.", _amount, "Coins"], "PLAIN DOWN"];			
+					cutText [format["You have deposited %1 %2.", [_amount] call BIS_fnc_numberText, CurrencyName], "PLAIN DOWN"];			
 	}else{
-	cutText [format["You can only have a max of %1 coins, donators %2", MaxBankMoney,MaxDonatorBankMoney], "PLAIN DOWN"];
+	cutText [format["You can only have a max of %1 %3, donators %2", MaxBankMoney,MaxDonatorBankMoney,CurrencyName], "PLAIN DOWN"];
 	};
 	}else{	
 	player setVariable["headShots",(_wealth - _amount),true];
@@ -79,7 +70,7 @@ BankDialogDepositAmount = {
 	player setVariable ["moneychanged",1,true];	
 	PVDZE_plr_Save = [player,(magazines player),true,true] ;
 	publicVariableServer "PVDZE_plr_Save";	
-	cutText [format["You have deposited %1 %2.", _amount, "Coins"], "PLAIN DOWN"];
+	cutText [format["You have deposited %1 %2.", [_amount] call BIS_fnc_numberText, CurrencyName], "PLAIN DOWN"];
 	};
 };
 
@@ -103,5 +94,5 @@ GivePlayerAmount = {
 	
 	player setVariable ["moneychanged",1,true];	
 
-	cutText [format["You gave %1 %2.", _amount, "Coins"], "PLAIN DOWN"];
+	cutText [format["You gave %1 %2.", _amount, CurrencyName], "PLAIN DOWN"];
 };

@@ -100,7 +100,7 @@ TraderDialogLoadItemList = {
 		}; 
 
 		// Display Name of buy item
-		_btextCurrency = "Coins" ; //getText(configFile >> _btype >> _bname >> "displayName");
+		_btextCurrency = CurrencyName ; //getText(configFile >> _btype >> _bname >> "displayName");
 
 		_sell = _x select 4; // [3,"Itemgoldbar",1],
 		_sqty = _sell select 0; //3
@@ -120,7 +120,7 @@ TraderDialogLoadItemList = {
 			}; 
 		}; 
 		// Display Name of sell item
-		_stextCurrency = "Coins";	//getText(configFile >> _stype >> _sname >> "displayName");
+		_stextCurrency = CurrencyName;	//getText(configFile >> _stype >> _sname >> "displayName");
 
 		// Menu sort order
 		_order = _x select 5; //
@@ -198,11 +198,11 @@ TraderDialogShowPrices = {
 	
 
 
-	ctrlSetText [TraderDialogBuyPrice, format["%1 %2", _item select 2, _item select 4]];
+	ctrlSetText [TraderDialogBuyPrice, format["%1 %2", [_item select 2] call BIS_fnc_numberText, CurrencyName]];
 
 	ctrlEnable [TraderDialogBuyBtn, true];
 
-	ctrlSetText [TraderDialogSellPrice, format["%1 %2", _item select 5, _item select 7]];
+	ctrlSetText [TraderDialogSellPrice, format["%1 %2", [_item select 5] call BIS_fnc_numberText, CurrencyName]];
 };
 
 TraderDialogBuy = {

@@ -111,7 +111,7 @@ if (_qty >= _qty_in) then {
 					
 					_num_removed = _qty - _newM; // 
 					
-						systemChat format ['Payed %1 Coins. %2 incoming!',_num_removed,_part_out];
+						systemChat format ['Payed %1 %3. %2 incoming!',_num_removed,_part_out,CurrencyName];
 					if(_num_removed == _qty_in) then {
 						removeBackpack player;
 						player addBackpack _part_out;
@@ -152,6 +152,7 @@ if (_qty >= _qty_in) then {
 };
 
 DZE_ActionInProgress = false;
+
 
 _cid =	player getVariable ["CharacterID","0"];
 _headShotsZupa = player getVariable ["headShots",0];

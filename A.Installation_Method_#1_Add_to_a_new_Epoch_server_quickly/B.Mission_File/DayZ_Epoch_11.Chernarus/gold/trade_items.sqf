@@ -41,7 +41,7 @@ if(_free_magazine_slots < 1) exitWith {
 _total_trades = floor(_player_headShots / _price);
 if (_total_trades < 1) exitWith {
 	_needed =  _price - _player_headShots;
-	cutText [format["You need another %1 %2",_needed,"Coins"] , "PLAIN DOWN"];
+	cutText [format["You need another %1 %2",_needed,CurrencyName] , "PLAIN DOWN"];
 	call _finish_trade;
 };
 if (_total_trades > _free_magazine_slots) then {
@@ -106,16 +106,16 @@ for "_x" from 1 to _total_trades do {
 				player setVariable ["moneychanged",1,true];	
 				player addMagazine _name;
 				_abort = false;
-				cutText [format["Traded %1 %2 for %3",_price,"Coins",_textPart], "PLAIN DOWN"];
+				cutText [format["Traded %1 %2 for %3",_price,CurrencyName,_textPart], "PLAIN DOWN"];
 				PVDZE_plr_Save = [player,(magazines player),true,true] ;
-publicVariableServer "PVDZE_plr_Save";
+				publicVariableServer "PVDZE_plr_Save";
 			//} else {
 			//	cutText [format["Insufficient Stock %1",_textPart] , "PLAIN DOWN"];
 			//	_abort = true;
 			//};
 		} else {
 			_needed =  _price - _player_headShots;
-			cutText [format["You need another %1 %2",_needed,"Coins"] , "PLAIN DOWN"];
+			cutText [format["You need another %1 %2",_needed,CurrencyName] , "PLAIN DOWN"];
 			_abort = true;
 		};
 	};
@@ -225,24 +225,13 @@ for "_x" from 1 to _total_trades do {
 	if (_finished) then {
 	
 		_removed = ([player,_name,1] call BIS_fnc_invRemove);
-		
-
 		if (_removed > 0) then {
-			_player_headShots = player getVariable ["headShots",0];
-			/*PVDZE_obj_Trade = [player,_traderID,1];
-			publicVariableServer  "PVDZE_obj_Trade";
-			waitUntil {!isNil "dayzTradeResult"};
-			if(dayzTradeResult == "PASS") then {*/
+			_player_headShots = player getVariable ["headShots",0];	
 				player setVariable["headShots",(_player_headShots + _price),true];
 				player setVariable ["moneychanged",1,true];	
-				cutText [format[("Traded %1 for %2 %3"),_textPart,_price,"Coins"], "PLAIN DOWN"];
+				cutText [format[("Traded %1 for %2 %3"),_textPart,_price,CurrencyName], "PLAIN DOWN"];
 				PVDZE_plr_Save = [player,(magazines player),true,true] ;
-publicVariableServer "PVDZE_plr_Save";
-			//} else {
-			//	cutText ["Something went wrong with hive", "PLAIN DOWN"];
-			//	_abort = true;
-			//	player addMagazine _name;
-			//};
+				publicVariableServer "PVDZE_plr_Save";
 		} else {
 			cutText [format["Something went wrong. Could not remove %1 from inventory", _name], "PLAIN DOWN"];
 			_abort = true;
@@ -255,13 +244,13 @@ publicVariableServer "PVDZE_plr_Save";
 DZE_ActionInProgress = false;
 
 
-
+/*
 _cid =	player getVariable ["CharacterID","0"];
 _headShotsZupa = player getVariable ["headShots",0];
 _key = format["CHILD:999:UPDATE `character_data` SET `HeadshotsZ` = %1 WHERE `CharacterID` = %2:[0]:",_headShotsZupa,_cid];
 _result = _key call server_hiveReadWrite;
 	
-	
+*/
 	
 };
 

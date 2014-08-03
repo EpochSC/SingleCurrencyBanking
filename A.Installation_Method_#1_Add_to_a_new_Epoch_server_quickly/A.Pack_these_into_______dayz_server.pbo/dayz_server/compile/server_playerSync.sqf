@@ -114,7 +114,7 @@ if (_characterID != "0") then {
 		_kills = 		["zombieKills",_character] call server_getDiff;
 		_killsB = 		["banditKills",_character] call server_getDiff;
 		_killsH = 		["humanKills",_character] call server_getDiff;
-		_headShots = 	["headShots",_character] call server_getDiff;
+		_headShots = 	0;
 		_humanity = 	["humanity",_character] call server_getDiff2;
 		//_humanity = 	_character getVariable ["humanity",0];
 		_character addScore _kills;		
@@ -224,8 +224,7 @@ if (_characterID != "0") then {
 				if( isNil "_banking") then{
 				
 				_banking = 0;
-				}else{
-				
+				}else{				
 				_character setVariable ["bankchanged",0,true];
 				_playerid = getPlayerUID _character;
 				_key = format["CHILD:999:UPDATE `player_data` SET `PlayerMorality`= %1 WHERE `PlayerUID`= '%2':[0]:",_banking,_playerid];

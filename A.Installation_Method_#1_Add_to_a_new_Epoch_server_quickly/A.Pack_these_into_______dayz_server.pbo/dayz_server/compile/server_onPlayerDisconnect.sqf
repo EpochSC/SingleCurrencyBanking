@@ -58,7 +58,7 @@ if (!isNull _playerObj) then {
 		// prevent saving more than 20 magazine items
 		_magazines = [(magazines _playerObj),20] call array_reduceSize;
 
-		[_playerObj,_magazines,true,true,_isplayernearby] call server_playerSync;
+		[_playerObj,_magazines,true,true,_isplayernearby] call server_playerSync; // maybe change somethin here
 		
 		// remove player
 		_playerObj call dayz_removePlayerOnDisconnect;
