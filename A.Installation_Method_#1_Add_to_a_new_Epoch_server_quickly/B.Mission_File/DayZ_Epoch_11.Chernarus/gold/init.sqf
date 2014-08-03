@@ -61,7 +61,7 @@ BankDialogDepositAmount = {
 					publicVariableServer "PVDZE_plr_Save";				
 					cutText [format["You have deposited %1 %2.", [_amount] call BIS_fnc_numberText, CurrencyName], "PLAIN DOWN"];			
 	}else{
-	cutText [format["You can only have a max of %1 %3, donators %2", MaxBankMoney,MaxDonatorBankMoney,CurrencyName], "PLAIN DOWN"];
+	cutText [format["You can only have a max of %1 %3, donators %2", [MaxBankMoney] call BIS_fnc_numberText,[MaxDonatorBankMoney] call BIS_fnc_numberText,CurrencyName], "PLAIN DOWN"];
 	};
 	}else{	
 	player setVariable["headShots",(_wealth - _amount),true];
